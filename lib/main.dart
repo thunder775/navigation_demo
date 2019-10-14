@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navigation_demo/home_page.dart';
 
 void main() {
   runApp(
@@ -18,11 +19,13 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Navigation')),
+      appBar: AppBar(title: Text('Login')),
       body: Center(
         child: RaisedButton(
-          child: Text('Go to Home'),
-          onPressed: (){},
+          child: Text('Login'),
+          onPressed: (){
+            Navigator.push(context,MaterialPageRoute(builder: (context)=> HomePage()));
+          },
         ),
       ),
     );
